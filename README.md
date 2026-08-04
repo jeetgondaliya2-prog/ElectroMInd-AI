@@ -2,9 +2,7 @@
 
 ### AI-Powered Troubleshooting Assistant using Retrieval-Augmented Generation (RAG)
 
-<p align="center">
-  <img src="assets/system_architecture.png" alt="ElectroMind AI Architecture" width="900"/>
-</p>
+
 
 <p align="center">
 
