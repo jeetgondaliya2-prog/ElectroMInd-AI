@@ -291,6 +291,8 @@ vector_db/
 ```bash
 streamlit run app.py
 ```
+LIVE DEMO : https://electromind-ai-8tp2vcbfxv8gsm6skmjw6q.streamlit.app/
+
 
 ---
 
