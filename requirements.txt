@@ -1,16 +1,17 @@
-streamlit
-python-dotenv
+streamlit>=1.37.0
+python-dotenv>=1.0.1
 
-langchain
-langchain-community
-langchain-google-genai
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
 
-chromadb
+langchain-chroma>=0.2.0
+langchain-huggingface>=0.1.0
+langchain-mistralai>=0.2.0
 
-pypdf
+chromadb>=0.5.5
+sentence-transformers>=3.0.1
 
-sentence-transformers
+pypdf>=5.0.0
 
-langchain-text-splitters
-
-tiktoken
+tiktoken>=0.8.0
