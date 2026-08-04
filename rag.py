@@ -1,4 +1,5 @@
 import os
+import streamlit as st
 from dotenv import load_dotenv
 
 from langchain_chroma import Chroma
@@ -7,18 +8,23 @@ from langchain_mistralai import ChatMistralAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
+load_dotenv()
+
+api_key = st.secrets.get("MISTRAL_API_KEY", os.getenv("MISTRAL_API_KEY"))
+
 # -------------------------------------------------
 # Load Environment Variables
 # -------------------------------------------------
 
-load_dotenv()
+
 
 # -------------------------------------------------
 # Embedding Model
 # -------------------------------------------------
 
 embedding_model = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
+    model_name="sentence-transformers/all-MiniLM-L6-v2",
+    model_kwargs={"device": "cpu"}
 )
 
 # -------------------------------------------------
@@ -40,8 +46,9 @@ retriever = vector_db.as_retriever(
 
 llm = ChatMistralAI(
     model="mistral-small-latest",
-    temperature=0.3,
-    api_key=os.getenv("MISTRAL_API_KEY")
+    temperature=0,
+    api_key=api_key,
+    max_retries=0
 )
 
 # -------------------------------------------------
