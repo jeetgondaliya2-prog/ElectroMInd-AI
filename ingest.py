@@ -8,7 +8,7 @@ from utils.splitter import split_documents
 from utils.embeddings import get_embedding_model
 
 
-def create_vector_database():
+def create_vector_database(): 
     print("=" * 60)
     print("🚀 Building Vector Database")
     print("=" * 60)
