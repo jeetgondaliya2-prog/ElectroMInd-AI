@@ -6,7 +6,7 @@ from rag import ask_question
 # Page Configuration
 # -----------------------------
 st.set_page_config(
-    page_title="ElectroMind AI",
+    page_title="ElectroMind AI", 
     page_icon="🤖",
     layout="wide"
 )
