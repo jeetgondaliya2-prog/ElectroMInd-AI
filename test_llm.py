@@ -4,7 +4,7 @@ import os
 from langchain_mistralai import ChatMistralAI
 
 load_dotenv()
-
+ 
 model = ChatMistralAI(
     model="mistral-small-latest",
     temperature=0.7,
