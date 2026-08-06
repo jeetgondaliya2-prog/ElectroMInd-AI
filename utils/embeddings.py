@@ -1,7 +1,7 @@
 from langchain_huggingface import HuggingFaceEmbeddings
 
 
-def get_embedding_model():
+def get_embedding_model(): 
     """
     Create and return the embedding model.
     """
